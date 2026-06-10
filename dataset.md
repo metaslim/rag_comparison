@@ -40,9 +40,9 @@ and the rest 1,177 are hybrid conversations.
 
 | Split | Conversations | Questions |
 |-------|----------------|-----------|
-| Train | 3,037          | —         |
-| Dev   | 421            | —         |
-| Test  | 434            | —         |
+| Train | 3,037          | n/a         |
+| Dev   | 421            | n/a         |
+| Test  | 434            | n/a         |
 | **Total** | **3,892**      | **14,115**   |
 
 <img src="figures/dataset_stats.png" alt="Dataset Statistics" width="350"/>
@@ -110,7 +110,7 @@ class ConvFinQARecord(BaseModel):
     id: str = Field(description="The id of the record")
     doc: Document = Field(description="The document")
     dialogue: Dialogue = Field(description="The conversational dialogue")
-    features: Features = Field(description="The features of the record, created by Tomoro to help you understand the data")
+    features: Features = Field(description="The features of the record")
 
 
 class Document(BaseModel):

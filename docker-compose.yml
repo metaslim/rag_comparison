@@ -1,0 +1,36 @@
+services:
+  neo4j:
+    image: neo4j:5.26
+    container_name: metaslim-neo4j-1
+    ports:
+      - "7474:7474"   # HTTP — Neo4j Browser UI at http://localhost:7474
+      - "7687:7687"   # Bolt — driver protocol used by Graphiti
+    environment:
+      NEO4J_AUTH: neo4j/password
+      NEO4J_PLUGINS: '["apoc"]'
+      # Memory (non-deprecated keys for Neo4j 5.x)
+      NEO4J_server_memory_heap_initial__size: 512m
+      NEO4J_server_memory_heap_max__size: 2G
+    volumes:
+      - ./data/neo4j/data:/data
+      - ./data/neo4j_dump:/dump
+    # First-run auto-restore: if dev.dump exists and DB is empty, load the
+    # pre-built graph snapshot before starting Neo4j. Skips on subsequent runs.
+    entrypoint: >
+      sh -c "
+        if [ -f /dump/dev.dump ] && [ ! -d /data/databases/neo4j ]; then
+          echo 'Restoring pre-built graph from dev.dump...' &&
+          cp /dump/dev.dump /dump/neo4j.dump &&
+          neo4j-admin database load neo4j --from-path=/dump/ --overwrite-destination=true &&
+          rm -f /dump/neo4j.dump &&
+          echo 'Graph restored. Starting Neo4j...';
+        fi &&
+        /startup/docker-entrypoint.sh neo4j
+      "
+    healthcheck:
+      test: ["CMD-SHELL", "wget -q --spider http://localhost:7474 || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 20
+      start_period: 30s
+    restart: unless-stopped

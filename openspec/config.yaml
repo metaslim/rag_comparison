@@ -1,0 +1,16 @@
+schema: spec-driven
+
+context: |
+  Tech stack: Python 3.12, uv, Typer CLI, Pydantic v2, Graphiti 0.29.1 + Neo4j 5.26 (temporal knowledge graph), SQLite, OpenAI (gpt-5-mini agent + gpt-4o-mini for Graphiti extraction + text-embedding-3-small).
+  Domain: Conversational financial question answering over semi-structured documents (ConvFinQA dataset).
+  Principles: SOLID, OOD, DRY, YAGNI. No over-engineering.
+  Testing: pytest with pytest-asyncio, unit tests with mocked external dependencies.
+  Config: centralised in src/config/settings.py via Settings class, loaded from .env.
+  Entry point: uv run main (Typer app in src/main.py).
+  Commands: index --split {dev,train,all} (build graph), chat <record_id> (interactive QA with on-demand indexing), evaluate --limit N --no-index (per-record auto-index then eval).
+  Layout: src/config/ for app config, src/convfinqa/ for domain (models, data, graph, agent, evaluation), src/lib/ for reusable infrastructure (conversation store, evaluation metrics, util, interfaces).
+
+rules:
+  tasks:
+    - Break tasks into small, verifiable units
+    - Each task should be completable independently

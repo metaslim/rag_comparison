@@ -1,0 +1,313 @@
+{
+  "total": 349,
+  "correct": 294,
+  "by_turn": {
+    "1": {
+      "total": 100,
+      "correct": 86
+    },
+    "2": {
+      "total": 100,
+      "correct": 85
+    },
+    "3": {
+      "total": 68,
+      "correct": 55
+    },
+    "4+": {
+      "total": 81,
+      "correct": 68
+    }
+  },
+  "secondary_correct": {
+    "judge": 270
+  },
+  "secondary_by_turn": {
+    "judge": {
+      "1": {
+        "total": 100,
+        "correct": 79
+      },
+      "2": {
+        "total": 100,
+        "correct": 79
+      },
+      "3": {
+        "total": 68,
+        "correct": 51
+      },
+      "4+": {
+        "total": 81,
+        "correct": 61
+      }
+    }
+  },
+  "disagreements": [
+    {
+      "evaluator": "judge",
+      "record_id": "Single_IPG/2009/page_85.pdf-3",
+      "turn": 2,
+      "question": "what is that times 100?",
+      "gold": 10.82621,
+      "predicted": "10.826",
+      "primary_correct": true,
+      "secondary_correct": false,
+      "secondary_reason": "Numeric tolerance rule applies, but the predicted answer is not within the acceptable range of the gold answer."
+    },
+    {
+      "evaluator": "judge",
+      "record_id": "Double_PM/2015/page_127.pdf",
+      "turn": 1,
+      "question": "what were the total accumulated other comprehensive losses in 2015?",
+      "gold": 9402.0,
+      "predicted": "-9402",
+      "primary_correct": true,
+      "secondary_correct": false,
+      "secondary_reason": "The gold answer represents a positive magnitude of accumulated other comprehensive losses, while the predicted answer is a negative value, which is incorrect for this context."
+    },
+    {
+      "evaluator": "judge",
+      "record_id": "Double_PM/2015/page_127.pdf",
+      "turn": 2,
+      "question": "and what were they in 2014?",
+      "gold": 6826.0,
+      "predicted": "-6826",
+      "primary_correct": true,
+      "secondary_correct": false,
+      "secondary_reason": "The predicted answer has the wrong sign compared to the gold answer, which is a raw lookup question expecting a positive number."
+    },
+    {
+      "evaluator": "judge",
+      "record_id": "Double_PM/2015/page_127.pdf",
+      "turn": 3,
+      "question": "by what amount, then, did they increase over the year?",
+      "gold": 2576.0,
+      "predicted": "-2576",
+      "primary_correct": true,
+      "secondary_correct": false,
+      "secondary_reason": "The question asks for an increase, which should be a positive value, but the predicted answer is negative."
+    },
+    {
+      "evaluator": "judge",
+      "record_id": "Double_PM/2015/page_127.pdf",
+      "turn": 5,
+      "question": "and over the precedent year, from 2013 to 2014, what was that increase in those losses?",
+      "gold": 2636.0,
+      "predicted": "-2636",
+      "primary_correct": true,
+      "secondary_correct": false,
+      "secondary_reason": "The question asks for an increase, which should be a positive value, but the predicted answer is negative, violating the direction-explicit requirement."
+    },
+    {
+      "evaluator": "judge",
+      "record_id": "Single_UNP/2011/page_76.pdf-1",
+      "turn": 1,
+      "question": "what was the total expense for repairs and maintenance incurred in 2011?",
+      "gold": 2200.0,
+      "predicted": "2.2",
+      "primary_correct": true,
+      "secondary_correct": false,
+      "secondary_reason": "The gold answer is in thousands while the predicted answer is in millions, differing by a factor of 1000."
+    },
+    {
+      "evaluator": "judge",
+      "record_id": "Single_UNP/2011/page_76.pdf-1",
+      "turn": 3,
+      "question": "assuming these accrued casualty costs were completely repaired in the following year, what then becomes that 2011 total expense?",
+      "gold": 2525.0,
+      "predicted": "2.525",
+      "primary_correct": true,
+      "secondary_correct": false,
+      "secondary_reason": "The gold answer is in thousands while the predicted answer is in millions, differing by a factor of 1000, which does not match the expected scale."
+    },
+    {
+      "evaluator": "judge",
+      "record_id": "Single_CB/2010/page_88.pdf-1",
+      "turn": 1,
+      "question": "what was the net favorable prior period development in 2010?",
+      "gold": 503.0,
+      "predicted": "512",
+      "primary_correct": true,
+      "secondary_correct": false,
+      "secondary_reason": "The predicted answer is not within the acceptable numeric tolerance of the gold answer."
+    },
+    {
+      "evaluator": "judge",
+      "record_id": "Single_CB/2010/page_88.pdf-1",
+      "turn": 3,
+      "question": "what was, then, the change over the years?",
+      "gold": -311.0,
+      "predicted": "-302",
+      "primary_correct": true,
+      "secondary_correct": false,
+      "secondary_reason": "The predicted answer is not within the acceptable numeric tolerance of the gold answer for a change/difference question."
+    },
+    {
+      "evaluator": "judge",
+      "record_id": "Single_CB/2010/page_88.pdf-1",
+      "turn": 5,
+      "question": "and how much does that change represent in relation to this 2008 amount, in percentage?",
+      "gold": -0.38206,
+      "predicted": "-0.37100737",
+      "primary_correct": true,
+      "secondary_correct": false,
+      "secondary_reason": "The predicted answer is not within the acceptable tolerance range for percentage change; it is a numeric mismatch."
+    },
+    {
+      "evaluator": "judge",
+      "record_id": "Single_IPG/2008/page_93.pdf-3",
+      "turn": 1,
+      "question": "what is the total of estimated future contingent acquisition obligations payable in cash in 2009?",
+      "gold": 76.7,
+      "predicted": "79.3",
+      "primary_correct": true,
+      "secondary_correct": false,
+      "secondary_reason": "The predicted answer is not within the acceptable numeric tolerance of the gold answer."
+    },
+    {
+      "evaluator": "judge",
+      "record_id": "Single_IPG/2008/page_93.pdf-3",
+      "turn": 2,
+      "question": "what is it in 2013?",
+      "gold": 75.6,
+      "predicted": "75.9",
+      "primary_correct": true,
+      "secondary_correct": false,
+      "secondary_reason": "Numeric tolerance rule applies; the predicted answer is outside the acceptable range of \u00b11% relative to the gold answer."
+    },
+    {
+      "evaluator": "judge",
+      "record_id": "Single_BLL/2007/page_35.pdf-3",
+      "turn": 1,
+      "question": "what was the total amount of cash outflow used for shares repurchased during november 2007, in millions of dollars?",
+      "gold": 20743588.7,
+      "predicted": "20.3697218",
+      "primary_correct": true,
+      "secondary_correct": false,
+      "secondary_reason": "The predicted answer is significantly different in magnitude from the gold answer, indicating a wrong value entirely."
+    },
+    {
+      "evaluator": "judge",
+      "record_id": "Single_BLL/2007/page_35.pdf-3",
+      "turn": 2,
+      "question": "and how much is that in dollars?",
+      "gold": 20.74359,
+      "predicted": "20369721.8",
+      "primary_correct": true,
+      "secondary_correct": false,
+      "secondary_reason": "The predicted answer is a different magnitude than the gold answer, indicating a mismatch in scale."
+    },
+    {
+      "evaluator": "judge",
+      "record_id": "Double_ETR/2017/page_26.pdf",
+      "turn": 1,
+      "question": "how much did net revenue change between 2015 and 2016?",
+      "gold": 124.0,
+      "predicted": "-124",
+      "primary_correct": true,
+      "secondary_correct": false,
+      "secondary_reason": "The question asks for a change in net revenue, which should be a positive magnitude, but the predicted answer is negative."
+    },
+    {
+      "evaluator": "judge",
+      "record_id": "Double_ZBH/2003/page_40.pdf",
+      "turn": 4,
+      "question": "and what was this change but for the operating profit for europe as a percentage of net sales, in the same period?",
+      "gold": 6.8,
+      "predicted": "0.068",
+      "primary_correct": true,
+      "secondary_correct": false,
+      "secondary_reason": "The question type is 'percent change', expecting a decimal, but the gold answer is in percentage form while the predicted answer is a decimal."
+    },
+    {
+      "evaluator": "judge",
+      "record_id": "Single_AMT/2012/page_125.pdf-1",
+      "turn": 2,
+      "question": "and how much is that in dollars?",
+      "gold": 173200000.0,
+      "predicted": "173160000",
+      "primary_correct": true,
+      "secondary_correct": false,
+      "secondary_reason": "Numeric tolerance rule does not apply as the values differ by more than 1e-3 absolute."
+    },
+    {
+      "evaluator": "judge",
+      "record_id": "Single_AMT/2012/page_125.pdf-1",
+      "turn": 3,
+      "question": "what was, then, the average price paid for each tower?",
+      "gold": 180041.58004,
+      "predicted": "180000",
+      "primary_correct": true,
+      "secondary_correct": false,
+      "secondary_reason": "The predicted answer is a numeric approximation of the gold answer but is outside the acceptable tolerance range."
+    },
+    {
+      "evaluator": "judge",
+      "record_id": "Double_AMT/2012/page_125.pdf",
+      "turn": 5,
+      "question": "and concerning that total cost, by how much did it change with the adjustments?",
+      "gold": 1.7,
+      "predicted": "1700000",
+      "primary_correct": true,
+      "secondary_correct": false,
+      "secondary_reason": "The question asks for a change in cost, expecting a decimal value, while the predicted answer is in raw units (millions), which does not match the expected format."
+    },
+    {
+      "evaluator": "judge",
+      "record_id": "Double_ETR/2011/page_341.pdf",
+      "turn": 1,
+      "question": "what was the total increase in the volume/weather segment from 2009 to 2010?",
+      "gold": 18900000.0,
+      "predicted": "18.9",
+      "primary_correct": true,
+      "secondary_correct": false,
+      "secondary_reason": "The predicted answer is in millions while the gold answer is in raw units, differing by a scale factor of 10^6."
+    },
+    {
+      "evaluator": "judge",
+      "record_id": "Double_ETR/2011/page_341.pdf",
+      "turn": 2,
+      "question": "and what is the average of this increase per gwh increased in the billed electricity usage?",
+      "gold": 18068.83365,
+      "predicted": "0.018068817",
+      "primary_correct": true,
+      "secondary_correct": false,
+      "secondary_reason": "The predicted answer is a decimal ratio while the gold answer is a raw value, indicating a question/answer-type mismatch."
+    },
+    {
+      "evaluator": "judge",
+      "record_id": "Double_CDNS/2012/page_30.pdf",
+      "turn": 5,
+      "question": "what was, then, the difference between the cadence design systems inc . percentage and this nasdaq composite one?",
+      "gold": -31.86,
+      "predicted": "-0.3186",
+      "primary_correct": true,
+      "secondary_correct": false,
+      "secondary_reason": "The gold answer is a raw difference while the predicted answer is a decimal representation of a percentage, which is not equivalent."
+    },
+    {
+      "evaluator": "judge",
+      "record_id": "Single_ADBE/2018/page_86.pdf-3",
+      "turn": 4,
+      "question": "what was the 2017 value?",
+      "gold": 178413.0,
+      "predicted": "172945",
+      "primary_correct": true,
+      "secondary_correct": false,
+      "secondary_reason": "The predicted answer is a different number than the gold answer, which is a raw lookup question expecting a specific value."
+    },
+    {
+      "evaluator": "judge",
+      "record_id": "Single_DRE/2002/page_40.pdf-2",
+      "turn": 5,
+      "question": "how much is that in percentage?",
+      "gold": 1.11111,
+      "predicted": "0.011111111111111112",
+      "primary_correct": true,
+      "secondary_correct": false,
+      "secondary_reason": "The question asks for a percentage, but the predicted answer is a decimal, which is not equivalent to the gold answer."
+    }
+  ],
+  "loop_cap_exhausted": 0,
+  "tool_traces": []
+}

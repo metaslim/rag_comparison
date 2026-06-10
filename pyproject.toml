@@ -1,18 +1,25 @@
 [project]
-name = "hiring-confinqa"
+name = "confinqa"
 version = "0.1.0"
 description = "ConfinQA assignment data processing and assessment"
 readme = "README.md"
-requires-python = ">=3.9"
+requires-python = ">=3.12"
 dependencies = [
-  "typer==0.12.0",
-  "click==8.1.7",
-  "dotenv>=0.9.9",
-  "pandas>=2.2.3",
-  "pydantic>=2.11.4",
-  "ruff>=0.11.10",
-  "mypy>=1.15.0",
-  "pylit>=0.8.0",
+  "typer",
+  "click",
+  "dotenv",
+  "pandas",
+  "pydantic",
+  "ruff",
+  "mypy",
+  "graphiti-core==0.29.1",
+  "openai",
+  "pytest",
+  "pytest-asyncio",
+  "chonkie>=1.6.7",
+  "catsu>=0.1.8",
+  "simpleeval>=1.0.7",
+  "tabulate>=0.10.0",
 ]
 
 
@@ -52,10 +59,19 @@ ignore = [
     "PLR2004",
     "D101",
     "D400",
+    "UP007",  # Typer doesn't yet support `X | None` need Optional[X] for CLI Options
+    "UP045",  # Same as UP007 for the `Optional[X]` form
+    "UP035",  # Pair with UP007: keep `from typing import Optional` available
 
 ]
 
 fixable = ["ALL"]
+
+# Rules whose autofix we explicitly DO NOT want applied (even if "fix=true").
+# UP007/UP006/UP035 rewrite `Optional[X]` / `Union[X, Y]` to `X | None` / `X | Y`,
+# but Typer (used in src/main.py) does not yet support the new-style annotations
+# for CLI Options. Keep these in the typing-style form.
+unfixable = ["UP006", "UP007", "UP035", "UP045"]
 
 extend-select = [
     "PLR2004",
@@ -68,6 +84,17 @@ extend-select = [
     "T201",
 ]
 
+[tool.ruff.lint.per-file-ignores]
+# Tests don't need docstrings on every helper / fixture / case
+"tests/**/*.py" = ["D101", "D102", "D103"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
+filterwarnings = [
+    "ignore::pydantic.warnings.PydanticDeprecatedSince20:graphiti_core",
+]
+
 [tool.mypy]
 disallow_any_generics = true
 disallow_untyped_defs = true
@@ -78,3 +105,8 @@ strict = false
 warn_return_any = true
 plugins = ['pydantic.mypy']
 packages = ["src"]
+
+[dependency-groups]
+dev = [
+    "pytest-cov>=7.1.0",
+]

@@ -1,0 +1,247 @@
+{
+  "total": 349,
+  "correct": 288,
+  "by_turn": {
+    "1": {
+      "total": 100,
+      "correct": 85
+    },
+    "2": {
+      "total": 100,
+      "correct": 85
+    },
+    "3": {
+      "total": 68,
+      "correct": 54
+    },
+    "4+": {
+      "total": 81,
+      "correct": 64
+    }
+  },
+  "secondary_correct": {
+    "judge": 270
+  },
+  "secondary_by_turn": {
+    "judge": {
+      "1": {
+        "total": 100,
+        "correct": 82
+      },
+      "2": {
+        "total": 100,
+        "correct": 80
+      },
+      "3": {
+        "total": 68,
+        "correct": 51
+      },
+      "4+": {
+        "total": 81,
+        "correct": 57
+      }
+    }
+  },
+  "disagreements": [
+    {
+      "evaluator": "judge",
+      "record_id": "Double_PM/2015/page_127.pdf",
+      "turn": 1,
+      "question": "what were the total accumulated other comprehensive losses in 2015?",
+      "gold": 9402.0,
+      "predicted": "-9402",
+      "primary_correct": true,
+      "secondary_correct": false,
+      "secondary_reason": "The gold answer represents a positive magnitude of accumulated other comprehensive losses, while the predicted answer is a negative signed value, which is incorrect for this context."
+    },
+    {
+      "evaluator": "judge",
+      "record_id": "Double_PM/2015/page_127.pdf",
+      "turn": 2,
+      "question": "and what were they in 2014?",
+      "gold": 6826.0,
+      "predicted": "-6826",
+      "primary_correct": true,
+      "secondary_correct": false,
+      "secondary_reason": "The predicted answer has the wrong sign compared to the gold answer, which is a numeric question expecting a positive value."
+    },
+    {
+      "evaluator": "judge",
+      "record_id": "Double_PM/2015/page_127.pdf",
+      "turn": 3,
+      "question": "by what amount, then, did they increase over the year?",
+      "gold": 2576.0,
+      "predicted": "-2576",
+      "primary_correct": true,
+      "secondary_correct": false,
+      "secondary_reason": "The question asks for an increase, which should be a positive value, but the predicted answer is negative."
+    },
+    {
+      "evaluator": "judge",
+      "record_id": "Double_PM/2015/page_127.pdf",
+      "turn": 5,
+      "question": "and over the precedent year, from 2013 to 2014, what was that increase in those losses?",
+      "gold": 2636.0,
+      "predicted": "-2636",
+      "primary_correct": true,
+      "secondary_correct": false,
+      "secondary_reason": "The question asks for an increase, which should be a positive value, but the predicted answer is negative."
+    },
+    {
+      "evaluator": "judge",
+      "record_id": "Single_UNP/2011/page_76.pdf-1",
+      "turn": 3,
+      "question": "assuming these accrued casualty costs were completely repaired in the following year, what then becomes that 2011 total expense?",
+      "gold": 2525.0,
+      "predicted": "2.449",
+      "primary_correct": true,
+      "secondary_correct": false,
+      "secondary_reason": "The predicted answer is significantly different from the gold answer, indicating a wrong magnitude."
+    },
+    {
+      "evaluator": "judge",
+      "record_id": "Single_IPG/2008/page_93.pdf-3",
+      "turn": 3,
+      "question": "what is the net change?",
+      "gold": 1.1,
+      "predicted": "-1.1",
+      "primary_correct": true,
+      "secondary_correct": false,
+      "secondary_reason": "The question asks for a net change, which should be a positive magnitude, but the predicted answer is negative."
+    },
+    {
+      "evaluator": "judge",
+      "record_id": "Single_IPG/2008/page_93.pdf-3",
+      "turn": 4,
+      "question": "what is the net change over the 2013 value?",
+      "gold": 0.01434,
+      "predicted": "-0.014552",
+      "primary_correct": true,
+      "secondary_correct": false,
+      "secondary_reason": "The predicted answer is a signed value while the gold answer is a magnitude, which is a mismatch for the question type 'net change'."
+    },
+    {
+      "evaluator": "judge",
+      "record_id": "Single_IPG/2008/page_93.pdf-3",
+      "turn": 5,
+      "question": "what is that times 100?",
+      "gold": 1.43416,
+      "predicted": "-1.4552238805970148",
+      "primary_correct": true,
+      "secondary_correct": false,
+      "secondary_reason": "The predicted answer is a different value entirely from the gold answer, violating the numeric match rule."
+    },
+    {
+      "evaluator": "judge",
+      "record_id": "Single_BLL/2007/page_35.pdf-3",
+      "turn": 2,
+      "question": "and how much is that in dollars?",
+      "gold": 20.74359,
+      "predicted": "20743588.7",
+      "primary_correct": true,
+      "secondary_correct": false,
+      "secondary_reason": "The predicted answer is in a different scale (dollars) compared to the gold answer (which appears to be in millions), violating the scale equivalence rule."
+    },
+    {
+      "evaluator": "judge",
+      "record_id": "Double_ETR/2017/page_26.pdf",
+      "turn": 1,
+      "question": "how much did net revenue change between 2015 and 2016?",
+      "gold": 124.0,
+      "predicted": "-124",
+      "primary_correct": true,
+      "secondary_correct": false,
+      "secondary_reason": "The question asks for a change in net revenue, which should be a positive magnitude, but the predicted answer is negative."
+    },
+    {
+      "evaluator": "judge",
+      "record_id": "Double_ZBH/2003/page_40.pdf",
+      "turn": 4,
+      "question": "and what was this change but for the operating profit for europe as a percentage of net sales, in the same period?",
+      "gold": 6.8,
+      "predicted": "0.068",
+      "primary_correct": true,
+      "secondary_correct": false,
+      "secondary_reason": "The question asks for a percentage, but the gold answer is in percentage points while the predicted answer is a decimal, which is not equivalent in this context."
+    },
+    {
+      "evaluator": "judge",
+      "record_id": "Double_GS/2012/page_165.pdf",
+      "turn": 2,
+      "question": "and in 2011?",
+      "gold": 0.23618,
+      "predicted": "0.2363455",
+      "primary_correct": true,
+      "secondary_correct": false,
+      "secondary_reason": "Numeric tolerance does not apply as the values differ by more than 1e-3 absolute."
+    },
+    {
+      "evaluator": "judge",
+      "record_id": "Double_ETR/2011/page_341.pdf",
+      "turn": 1,
+      "question": "what was the total increase in the volume/weather segment from 2009 to 2010?",
+      "gold": 18900000.0,
+      "predicted": "18.9",
+      "primary_correct": true,
+      "secondary_correct": false,
+      "secondary_reason": "The predicted answer is in millions while the gold answer is in raw units, differing by a scale factor of 10^6."
+    },
+    {
+      "evaluator": "judge",
+      "record_id": "Double_ETR/2011/page_341.pdf",
+      "turn": 2,
+      "question": "and what is the average of this increase per gwh increased in the billed electricity usage?",
+      "gold": 18068.83365,
+      "predicted": "0.01807",
+      "primary_correct": true,
+      "secondary_correct": false,
+      "secondary_reason": "The predicted answer is a decimal ratio while the gold answer is a raw value, indicating a question/answer-type mismatch."
+    },
+    {
+      "evaluator": "judge",
+      "record_id": "Double_CDNS/2012/page_30.pdf",
+      "turn": 5,
+      "question": "what was, then, the difference between the cadence design systems inc . percentage and this nasdaq composite one?",
+      "gold": -31.86,
+      "predicted": "-0.3186",
+      "primary_correct": true,
+      "secondary_correct": false,
+      "secondary_reason": "The question asks for a raw difference, but the predicted answer is a decimal representation of a percentage, which is not equivalent to the gold answer."
+    },
+    {
+      "evaluator": "judge",
+      "record_id": "Single_GS/2012/page_165.pdf-3",
+      "turn": 2,
+      "question": "what is that less the value of assets related to the firm 2019s reinsurance business which were classified as held for sale as of december 2012?",
+      "gold": 3.464,
+      "predicted": "3464",
+      "primary_correct": true,
+      "secondary_correct": false,
+      "secondary_reason": "The gold answer is in billions while the predicted answer is in raw dollars, differing by a scale factor of 10^9."
+    },
+    {
+      "evaluator": "judge",
+      "record_id": "Single_ADBE/2018/page_86.pdf-3",
+      "turn": 4,
+      "question": "what was the 2017 value?",
+      "gold": 178413.0,
+      "predicted": "172945",
+      "primary_correct": true,
+      "secondary_correct": false,
+      "secondary_reason": "The predicted answer is a different number than the gold answer, which is a raw lookup question expecting a specific value."
+    },
+    {
+      "evaluator": "judge",
+      "record_id": "Single_DRE/2002/page_40.pdf-2",
+      "turn": 5,
+      "question": "how much is that in percentage?",
+      "gold": 1.11111,
+      "predicted": "0.011111111111",
+      "primary_correct": true,
+      "secondary_correct": false,
+      "secondary_reason": "The question expects a percentage, but the gold answer is a decimal while the predicted answer is a different decimal, indicating a mismatch in value."
+    }
+  ],
+  "loop_cap_exhausted": 0,
+  "tool_traces": []
+}
